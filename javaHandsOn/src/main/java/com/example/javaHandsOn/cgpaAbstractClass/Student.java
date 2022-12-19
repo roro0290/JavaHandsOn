@@ -36,13 +36,13 @@ public abstract class Student {
     }
 
     double gradePointMultiplyWithCreditPoint(String a, String b){
-        double gradePoint = getGradePoint(Integer.parseInt(a));
+        double gradePoint = getGradePoint(Double.parseDouble(a));
         double creditPoint = Double.parseDouble(b);
         this.creditPointMaximum += 5;
         return creditPoint * gradePoint ;
     }
 
-    double getGradePoint(int score){
+    double getGradePoint(double score){
         double gradePoint = 0;
         if(score>=75){
             gradePoint = (10.0-9.0)/(100-75)*(score-75)+9.0;
