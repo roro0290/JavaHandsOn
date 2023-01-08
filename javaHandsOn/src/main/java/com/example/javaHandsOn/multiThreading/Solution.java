@@ -1,44 +1,73 @@
 package com.example.javaHandsOn.multiThreading;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Task1 extends Thread{
-    static int a; // = input #1
+    static int a; // = input #1 = 80
     static int beg; /// = 0
+
+    int min = 0, max = 0, range = 0,track=0;
+
+    ArrayList<Integer> list = new ArrayList<>();
 
     @Override
     public void run() {
         synchronized (Solution.threadArray){
-            for(int i=beg;i<a;i++){
-                Solution.threadArray[i]=i;
+            for(int i=beg;i<=a;i++){ // add 0 to 79
+                list.add(i);
+            }
+            while(track<a-beg+1){
+                max = list.size();
+                range = max - min;
+                int i = (int) (Math.random() * range);
+                Solution.threadArray[track]=list.get(i);
+                list.remove(i);
+                track+=1;
             }
         }
     }
 }
 
 class Task2 extends Thread{
-    static int a; // = input #2
-    static int beg; // = input #1
+    static int a; // = input #2 = 130
+    static int beg; // = input #1 = 80
+
+    ArrayList<Integer> list = new ArrayList<>();
+
+    int min = 0, max = 0, range = 0,track=beg; // 80
 
     @Override
     public void run() {
         synchronized (Solution.threadArray){
-            for(int i=beg;i<a;i++){
-                Solution.threadArray[i]=i;
+            for(int i=beg;i<beg+a;i++){
+                list.add(i);
+            }
+            while(track<beg+a){
+                max = list.size();
+                range = max - min;
+                int i = (int) (Math.random() * range);
+                Solution.threadArray[track]=list.get(i);
+                list.remove(i);
+                track+=1;
             }
         }
     }
 
-    }
+}
 
 class Task3 extends Thread{
-    static int a; // = input #3
-    static int beg; // = input #1 + input #2
+    static int a; // = input #3 = 90
+    static int beg; // = input #1 + input #2 = 80 + 130 = 210
+
+    ArrayList<Integer> list = new ArrayList<>();
+
+    int min = 0, max = 0, range = 0,track=beg;
 
     @Override
     public void run() {
-        synchronized(Solution.threadArray){
-            for(int i=beg;i<a;i++){
+        synchronized (Solution.threadArray){
+            for(int i=beg;i<beg+a;i++){
                 Solution.threadArray[i]=i;
             }
         }
@@ -82,28 +111,29 @@ public class Solution {
         {
             task3String += threadArray[j]+" ";
         }
-        if((!oneAndTwo.contains(begOfTask3+"") && sizeOfTask1.contains(Task2.beg+"")) || task3String.equals(checkingString))
+        if((oneAndTwo.contains(begOfTask3+"") && sizeOfTask1.contains(Task2.beg+"")) && task3String.equals(checkingString))
         {
             return true;
         }
-        for(int i:threadArray){
-            System.out.print(i);
+        for(int i=0;i<300;i++){
+            System.out.print(threadArray[i]);
         }
         return false;
     }
+    // SAMPLE INPUT: 80, 130, 90
     public static void main(String[] args) throws InterruptedException
     {
         Scanner sc= new Scanner(System.in);
         Solution solution = new Solution();
-        int one = sc.nextInt();
-        Task1.a = one;
+        int one = 80;
+        Task1.a = one; // 80
         Task1.beg = 0;
-        int two = sc.nextInt();
-        Task2.a = two;
-        Task2.beg = one;
-        int three = sc.nextInt();
-        Task3.a = three;
-        Task3.beg = one+two;
+        int two = 130;
+        Task2.a = two; // 130
+        Task2.beg = one; // 80
+        int three = 90;
+        Task3.a = three; // 90
+        Task3.beg = one+two; // 80 + 130 = 210
         System.out.print(solution.test());
     }
 }
