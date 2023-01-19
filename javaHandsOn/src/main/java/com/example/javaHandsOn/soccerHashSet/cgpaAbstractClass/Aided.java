@@ -1,4 +1,4 @@
-package com.example.javaHandsOn.cgpaAbstractClass;
+package com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass;
 
 public class Aided extends Student {
 

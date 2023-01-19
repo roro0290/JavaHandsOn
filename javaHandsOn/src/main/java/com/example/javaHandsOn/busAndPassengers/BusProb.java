@@ -45,20 +45,25 @@ public class BusProb {
         }
         List<Passanger> passangerList = getPassengerList(capacity,listOfInputStrings);
         switch (querySplit[0]) {
-            case "1" -> {
+            case "1" : {
                 outstring = query1(listOfInputStrings);
+                break;
             }
-            case "2" -> {
+            case "2" : {
                 outstring = query2(capacity, passangerList);
+                break;
             }
-            case "3" -> {
+            case "3" : {
                 outstring = query3(passangerList,id);
+                break;
             }
-            case "4" -> {
+            case "4" : {
                 outstring = query4(passangerList,id);
+                break;
             }
-            case "5" -> {
+            case "5" : {
                 outstring = query5(passangerList,listOfInputStrings,id);
+                break;
             }
         }
         return outstring;

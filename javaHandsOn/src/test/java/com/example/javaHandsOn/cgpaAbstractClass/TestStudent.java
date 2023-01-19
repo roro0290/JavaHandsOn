@@ -1,11 +1,10 @@
 package com.example.javaHandsOn.cgpaAbstractClass;
 
-import org.junit.Before;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass.Aided;
+import com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass.SelfFinance;
+import com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
