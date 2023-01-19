@@ -119,6 +119,7 @@ public class TreemapHandson {
 
     String processQuery3(String cricketDataset){
         String output = "The Efficient Opener is ";
+        // NOTE THE UNCHECKED CAST TYPE ISSUE
         TreeMap<String,Integer> map = (TreeMap<String, Integer>) createMatchesMap(cricketDataset);
         int highestScore = 0;
         String name = "";

@@ -1,4 +1,4 @@
-package com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass;
+package com.example.javaHandsOn.hashSetSocccerCGPA.cgpaAbstractClass;
 
 public class SelfFinance extends Student{
 

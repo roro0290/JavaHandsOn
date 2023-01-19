@@ -1,4 +1,4 @@
-package com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass;
+package com.example.javaHandsOn.hashSetSocccerCGPA.cgpaAbstractClass;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

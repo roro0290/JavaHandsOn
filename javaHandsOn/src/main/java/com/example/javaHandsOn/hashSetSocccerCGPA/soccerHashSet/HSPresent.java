@@ -1,4 +1,4 @@
-package com.example.javaHandsOn.soccerHashSet;
+package com.example.javaHandsOn.hashSetSocccerCGPA.soccerHashSet;
 
 import java.io.BufferedReader;
 import java.io.File;

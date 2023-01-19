@@ -1,4 +1,4 @@
-package com.example.javaHandsOn.soccerHashSet;
+package com.example.javaHandsOn.hashSetSocccerCGPA.soccerHashSet;
 
 import java.util.*;
 import java.util.Map.Entry;

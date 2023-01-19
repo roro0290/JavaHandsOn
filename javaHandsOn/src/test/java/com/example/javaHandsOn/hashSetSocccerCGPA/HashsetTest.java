@@ -1,7 +1,10 @@
-package com.example.javaHandsOn.soccerHashSet;
+package com.example.javaHandsOn.hashSetSocccerCGPA;
 
 import java.io.IOException;
 import java.util.Arrays;
+
+import com.example.javaHandsOn.hashSetSocccerCGPA.soccerHashSet.HSPresent;
+import com.example.javaHandsOn.hashSetSocccerCGPA.soccerHashSet.Hashset;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

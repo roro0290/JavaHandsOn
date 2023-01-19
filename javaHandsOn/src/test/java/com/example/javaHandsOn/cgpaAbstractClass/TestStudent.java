@@ -1,8 +1,8 @@
 package com.example.javaHandsOn.cgpaAbstractClass;
 
-import com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass.Aided;
-import com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass.SelfFinance;
-import com.example.javaHandsOn.soccerHashSet.cgpaAbstractClass.Student;
+import com.example.javaHandsOn.hashSetSocccerCGPA.cgpaAbstractClass.Aided;
+import com.example.javaHandsOn.hashSetSocccerCGPA.cgpaAbstractClass.SelfFinance;
+import com.example.javaHandsOn.hashSetSocccerCGPA.cgpaAbstractClass.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
