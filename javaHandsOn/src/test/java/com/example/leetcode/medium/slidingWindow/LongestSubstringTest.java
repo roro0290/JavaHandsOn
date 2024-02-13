@@ -1,5 +1,6 @@
-package com.example.leetcode.medium;
+package com.example.leetcode.medium.slidingWindow;
 
+import com.example.leetcode.medium.slidingWindow.LongestSubstring;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 

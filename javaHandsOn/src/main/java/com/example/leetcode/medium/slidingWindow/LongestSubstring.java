@@ -1,4 +1,4 @@
-package com.example.leetcode.medium;
+package com.example.leetcode.medium.slidingWindow;
 
 import java.util.HashSet;
 import java.util.Set;
