@@ -33,5 +33,39 @@ public class MaxConsecutiveOnes {
 
     }
 
+    public int longestOnes(int[] nums, int k) {
+
+        // define pointers
+        int R = 0, L = 0, zeroTrack = 0;
+        int count = 0, n = nums.length, max = 0;
+
+        while (R < nums.length) {
+
+            if (nums[R] == 1) {
+                count++;
+                R++;
+                max = Math.max(max, count);
+            } else { // number is 0
+                if (zeroTrack < k) {
+                    count++;
+                    zeroTrack++;
+                    R++;
+                    max = Math.max(max, count);
+                } else {
+                    while (zeroTrack >= k) {
+                        if (nums[L] == 0) {
+                            zeroTrack -= 1;
+                        }
+                        count--;
+                        L++;
+                    }
+                }
+            }
+
+        }
+
+        return max;
+    }
+
 
 }
