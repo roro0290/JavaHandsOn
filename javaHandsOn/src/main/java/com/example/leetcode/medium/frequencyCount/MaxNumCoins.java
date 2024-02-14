@@ -1,4 +1,4 @@
-package com.example.leetcode.medium;
+package com.example.leetcode.medium.frequencyCount;
 
 /*
 Leetcode: 1561

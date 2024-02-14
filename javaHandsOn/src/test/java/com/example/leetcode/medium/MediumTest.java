@@ -1,5 +1,6 @@
 package com.example.leetcode.medium;
 
+import com.example.leetcode.medium.frequencyCount.MaxNumCoins;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
