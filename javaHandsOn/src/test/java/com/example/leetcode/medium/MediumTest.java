@@ -2,6 +2,7 @@ package com.example.leetcode.medium;
 
 import com.example.leetcode.medium.frequencyCount.ArithmeticSubarrays;
 import com.example.leetcode.medium.frequencyCount.MaxNumCoins;
+import com.example.leetcode.medium.stack.ValidWord;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
@@ -36,6 +37,7 @@ public class MediumTest {
     public void validWordTest(){
         ValidWord validWord = new ValidWord();
         Assertions.assertTrue(validWord.isValid("aabcbc"));
+        Assertions.assertFalse(validWord.isValid("aabccc"));
         Assertions.assertFalse(validWord.isValid("aaabc"));
 
     }
