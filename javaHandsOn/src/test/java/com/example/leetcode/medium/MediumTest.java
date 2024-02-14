@@ -32,4 +32,12 @@ public class MediumTest {
         Assertions.assertEquals(result,subarrays.checkArithmeticSubarrays(nums,l,r));
     }
 
+    @Test
+    public void validWordTest(){
+        ValidWord validWord = new ValidWord();
+        Assertions.assertTrue(validWord.isValid("aabcbc"));
+        Assertions.assertFalse(validWord.isValid("aaabc"));
+
+    }
+
 }
