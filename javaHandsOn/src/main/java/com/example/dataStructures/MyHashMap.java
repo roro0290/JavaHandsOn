@@ -1,8 +1,6 @@
 package com.example.dataStructures;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class MyHashMap {
 
@@ -92,6 +90,14 @@ public class MyHashMap {
 
     public int hashFunction(int key) {
         return key % NUM;
+    }
+
+    void mapStream(Map<Integer,String> map, String s){
+
+        if(map.containsValue(s)){
+            map.entrySet().stream().filter(e -> e.getValue().equals(s)).forEach(e -> System.out.println(e.getValue()+"="+e.getKey()));
+        }
+
     }
 
 }
