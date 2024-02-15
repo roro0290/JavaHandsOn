@@ -57,12 +57,8 @@ public class Palindrome {
         char[] chars = s.toCharArray();
 
         // if the array is empty or the array has an odd number of characters
-        if (chars.length == 0 || chars.length == 1) {
+        if (chars.length == 0) {
             return true;
-        }
-
-        if(chars.length % 2 == 1){
-            return false;
         }
 
         // define pointers

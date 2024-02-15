@@ -27,8 +27,9 @@ public class PalindromeTest {
     @Test
     public void isPalindromeTestFour(){
         Palindrome palindrome = new Palindrome();
+        Assertions.assertTrue(palindrome.isPalindrome("."));
         Assertions.assertTrue(palindrome.isPalindrome("A man, a plan, a canal: Panama"));
-        Assertions.assertTrue(palindrome.isPalindrome(" "));
+
     }
 
 
