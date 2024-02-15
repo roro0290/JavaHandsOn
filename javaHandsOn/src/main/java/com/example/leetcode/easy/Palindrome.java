@@ -46,4 +46,47 @@ public class Palindrome {
         return x == half || x == half / 10; // the 2nd option is needed for the odd num digit scenario
     }
 
+    /*
+    Leetcode 125: Valid palindrome
+    The character class has methods to check types!
+     */
+    public boolean isPalindrome(String s) {
+
+        s = s.toLowerCase();
+        s = s.replace(" ", "");
+        char[] chars = s.toCharArray();
+
+        // if the array is empty or the array has an odd number of characters
+        if (chars.length == 0 || chars.length == 1) {
+            return true;
+        }
+
+        if(chars.length % 2 == 1){
+            return false;
+        }
+
+        // define pointers
+        int L = 0, R = chars.length - 1;
+
+        while (R >= L) {
+
+            if (!Character.isLetterOrDigit(chars[R])) {
+                R--;
+            } else if (!Character.isLetterOrDigit(chars[L])) {
+                L++;
+            } else {
+                if(chars[R] != chars[L]){
+                    return false;
+                }else{
+                    L++;
+                    R--;
+                }
+
+            }
+
+        }
+
+        return true;
+    }
+
 }

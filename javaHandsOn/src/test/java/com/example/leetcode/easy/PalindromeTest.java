@@ -23,4 +23,13 @@ public class PalindromeTest {
         Assertions.assertTrue(palindrome.isPalindromeTryThree(1221));
         Assertions.assertTrue(palindrome.isPalindromeTryThree(12321));
     }
+
+    @Test
+    public void isPalindromeTestFour(){
+        Palindrome palindrome = new Palindrome();
+        Assertions.assertTrue(palindrome.isPalindrome("A man, a plan, a canal: Panama"));
+        Assertions.assertTrue(palindrome.isPalindrome(" "));
+    }
+
+
 }
