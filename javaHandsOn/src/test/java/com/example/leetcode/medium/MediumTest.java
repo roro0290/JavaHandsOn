@@ -3,6 +3,7 @@ package com.example.leetcode.medium;
 import com.example.leetcode.medium.frequencyCount.ArithmeticSubarrays;
 import com.example.leetcode.medium.frequencyCount.MaxNumCoins;
 import com.example.leetcode.medium.stack.ReorderList;
+import com.example.leetcode.medium.stack.RotateArray;
 import com.example.leetcode.medium.stack.ValidWord;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
@@ -55,6 +56,13 @@ public class MediumTest {
         ReorderList list = new ReorderList();
         list.reorderList(node1);
 
+    }
+
+    @Test
+    public void rotateArrayTest(){
+
+        RotateArray ra = new RotateArray();
+        ra.rotate2(new int[]{-1,-100,3,99},2);
     }
 
 }
