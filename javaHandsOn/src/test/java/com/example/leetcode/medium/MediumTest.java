@@ -2,6 +2,7 @@ package com.example.leetcode.medium;
 
 import com.example.leetcode.medium.frequencyCount.ArithmeticSubarrays;
 import com.example.leetcode.medium.frequencyCount.MaxNumCoins;
+import com.example.leetcode.medium.slidingWindow.FindingAnagrams;
 import com.example.leetcode.medium.stack.ReorderList;
 import com.example.leetcode.medium.stack.RotateArray;
 import com.example.leetcode.medium.stack.ValidWord;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class MediumTest {
 
@@ -63,6 +65,23 @@ public class MediumTest {
 
         RotateArray ra = new RotateArray();
         ra.rotate2(new int[]{-1,-100,3,99},2);
+    }
+
+    @Test
+    public void addTwoNumbers(){
+        // l1 = [2,4,3], l2 = [5,6,4]
+        AddTwoNumbers add = new AddTwoNumbers();
+
+        System.out.println(18/10);
+        //add.createNode(807);
+    }
+
+    @Test
+    public void findingAnagrams(){
+        FindingAnagrams fa = new FindingAnagrams();
+        //fa.findAnagrams("cbaebabacd","abc");
+        //fa.findAnagrams("abab","ab");
+        fa.findAnagrams("abacbabc","abc");
     }
 
 }
