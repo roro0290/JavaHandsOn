@@ -22,6 +22,9 @@ public class TreeNodeTest {
 
         System.out.println("print in postorder");
         root.postOrderTraversal();
+
+        System.out.println("print using breadth first traversal");
+        root.breadthFirstSearch(root);
     }
 
 }
